@@ -1,0 +1,38 @@
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    margin: 50px;
+}
+
+a {
+    text-decoration: none;
+    color:blueviolet;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+main {
+    text-align: center;
+}
+
+div button {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    background-color: blueviolet;
+    border-radius: 5px;
+    color:white;
+    margin: auto;
+    padding: 8px 24px;
+    font-size: medium;
+}
+
+button:hover {
+    background-color: rgb(142, 103, 200);
+}
