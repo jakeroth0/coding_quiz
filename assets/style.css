@@ -19,20 +19,27 @@ main {
     text-align: center;
 }
 
-div button {
+/* div button {
     display: flex;
     justify-content: space-around;
+} */
+
+.option-bin {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0px 30% 0px 30%;
 }
 
 button {
-    background-color: blueviolet;
+    background-color: indigo;
     border-radius: 5px;
     color:white;
-    margin: auto;
+    margin: 10px;
     padding: 8px 24px;
     font-size: medium;
 }
 
 button:hover {
-    background-color: rgb(142, 103, 200);
+    background-color:mediumpurple;
 }
