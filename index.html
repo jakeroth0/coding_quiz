@@ -10,19 +10,86 @@
 
 <body>
     <nav>
-        <a href="">View high scores</a>
+        <button class="btn" id="high-score-btn">High Scores</button>
         <div>Time: </div>
     </nav>
 
 
 
-
+<!-- /game.html this was taken out of the play btn href -->
     <div class="container">
        <div id="home" class="flex-coumn flex-center">
             <h1>Coding Quiz Challenge</h1>
-            <a href="/game.html" class="btn">Play</a>
-            <a href="/highscores.html" id="highscore-btn" class="btn">High Scores</a>
+            <p>Try to answer the following code-related questions within the time limit. 
+            <br> Keep in mind that incorrect answers will penalize <br> your score/time by ten seconds!
+            </p>
+            <button class="btn" id="play-btn">Play</button>
+            <!-- <button class="btn" id="high-score-btn">High Scores</button> -->
        </div>
+    </div>
+    <div class="container hidden">
+      <div id="game" class="justify-center flex-column">
+          <div id="hud">
+              <div class="hut-item">
+                  <p id="progressText" class="hud-prefix">
+                      Question
+                  </p>
+                  <div id="progressBar">
+                      <div id="progressBarFull"></div>
+                  </div>
+              </div>
+              <div class="hud-item">
+                  <p class="hud-prefix">
+                      Score
+                  </p>
+                  <h1 class="hud-main-text" id="score">
+                      0
+                  </h1>
+              </div>
+          </div>
+          <h1 id="question">What is the answer to this question</h1>
+          <div class="choice-container">
+              <p class="choice-prefix">A</p>
+              <p class="choice-text" data-number="1">Choice</p>
+          </div>
+          <div class="choice-container">
+              <p class="choice-prefix">B</p>
+              <p class="choice-text" data-number="2">Choice</p>
+          </div>
+          <div class="choice-container">
+              <p class="choice-prefix">C</p>
+              <p class="choice-text" data-number="3">Choice</p>
+          </div>
+          <div class="choice-container">
+              <p class="choice-prefix">D</p>
+              <p class="choice-text" data-number="4">Choice</p>
+          </div>
+      </div>
+  </div>
+  <div class="container hidden">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore">0</h1>
+            <form class="end-form-container">
+                <h2 id="end-text">Enter your name below to save your score!</h2>
+                <input type="text" name="name" id="username" placeholder="Enter your name">
+                <button class="btn" id="saveScoreBtn" type="submit" 
+                onclick="saveHighScore(event)" disabled>Save</button>
+            </form>
+            <button class="btn" id="play-btn">Play Again</button>
+            
+        </div>
+    </div>
+    <div class="container hidden">
+        <div id="highScores" class="flex-center flex-column">
+            <h1 id="finalScore">Leaderboard</h1>
+            <ul id="highScoresList"></ul>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="flex-center flex-column">
+            <button id="home-btn" class="btn hidden">Go Home</a>
+        </div>
     </div>
     <!-- <main class="panel">
         <h1 class="question-bin">Coding Quiz Challenge</h1>
